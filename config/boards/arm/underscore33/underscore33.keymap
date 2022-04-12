@@ -23,6 +23,13 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp RALT>, <&none>, <&kp RALT>;
         };
+      tdhm: Home-Row-Mod-Bracket-GUI {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Homerow Bracket-GUI";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RGUI LBKT>, <&kp RBKT 0>;
+      };       
         tdcb: Comma-Backslash {
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Comma Backslash";
@@ -136,7 +143,7 @@ behaviors {
 //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                         bindings = <
    &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
-   &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &ld
+   &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &tdhm
    &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
    &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
                         >;
@@ -163,7 +170,7 @@ behaviors {
 // | BT0  | BT1 | BT2  | XXXX | XXXX | XXXX | F1-4  | BrtDn | XXXX | BrtUp |
 //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                         bindings = <
-   &bt BT_CLR   &reset        &bootloader   &none  &none  &none  &none  &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP
+   &bt BT_CLR   &reset        &bootloader   &none  &none  &none  &ld  &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP
    &bt BT_SEL 3 &bt BT_SEL 4  &none         &none  &none  &none  &none  &kp C_PREV    &kp C_PP   &kp C_NEXT
    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none  &none  &kp C_BRI_DN  &none      &kp C_BRI_UP
    &trans       &trans        &trans        &trans &trans &to 0
