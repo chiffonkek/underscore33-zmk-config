@@ -16,21 +16,19 @@
 / {
 
 behaviors {
-      hm: homerow_mods {
+    hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
         tapping_term_ms = <300>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
-      };
-    
-      tdhm: Home-Row-Mod-Bracket-GUI {
+      };tdhm: Home-Row-Mod-Bracket-GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "Homerow Bracket-GUI";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&kp RGUI>, <&kp RBKT>;
+            bindings = <&mt RGUI LBKT>, <&kp RBKT 0>;
       };
       tdcb: Comma-Backslash {
             compatible = "zmk,behavior-tap-dance";
@@ -73,6 +71,7 @@ behaviors {
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F9>, <&kp F10>, <&kp F11>, <&kp F12>;
+      };
       };
         
     combos {
