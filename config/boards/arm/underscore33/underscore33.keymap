@@ -25,7 +25,7 @@ behaviors {
         bindings = <&kp>, <&kp>;
     };
     
-tdhm: Home Row Mod Bracket-GUI {
+tdhm: Home-Row-Mod-Bracket-GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "Homerow Bracket-GUI";
             #binding-cells = <2>;
@@ -161,7 +161,7 @@ tdf9: F9-F12 {
    &kp N7  &kp N8  &kp N9  &kp N0     &kp LC(X)   &kp HOME    &kp PG_DN  &kp UP    &kp PG_UP  &kp END    
    &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LC(C)   &kp INS     &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL
    &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp LC(V)   &kp K_APP   &none      &trans    &trans     &trans
-   &trans    &trans    &trans    &trans      &trans      &to 0
+   &trans  &trans  &trans  &trans     &trans      &to 0
                         >;
                 };
 
@@ -175,7 +175,7 @@ tdf9: F9-F12 {
    &bt BT_CLR   &reset        &bootloader   &none  &none  &none  &tdf9  &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP
    &bt BT_SEL 3 &bt BT_SEL 4  &none         &none  &none  &none  &tdf5  &kp C_PREV    &kp C_PP   &kp C_NEXT
    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none  &tdf1  &kp C_BRI_DN  &none      &kp C_BRI_UP
-   &trans   &trans    &trans     &trans   &trans   &to 0
+   &trans       &trans        &trans        &trans &trans &to 0
                         >;
                 };
 
