@@ -29,7 +29,7 @@
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt RGUI LBKT>;
+                bindings = <&mt RGUI LBKT>, <&kp RBKT>;
             };
         tdeg: Escape-Grave {
                 compatible = "zmk,behavior-tap-dance";
