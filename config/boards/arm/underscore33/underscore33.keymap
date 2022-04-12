@@ -34,9 +34,9 @@
         tdddd: wow {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
-                #binding-cells = <2>;
+                #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt LSHIFT A>, <&mt LSHIFT B>; 
+                bindings = <&kp A>, <&kp B>; 
                 // <&kp RBKT none>
             };       
         tdcb: Comma-Backslash {
