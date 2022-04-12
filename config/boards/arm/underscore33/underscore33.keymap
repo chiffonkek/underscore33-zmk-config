@@ -36,7 +36,7 @@
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <2>;
                 tapping-term-ms = <200>;
-                bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
+                bindings = <&mt LSHIFT A>, <&mt LSHIFT B>; 
                 // <&kp RBKT none>
             };       
         tdcb: Comma-Backslash {
@@ -152,7 +152,7 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
-    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdddd
+    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &hm RSHFT J   &hm RCTRL K  &hm LALT L  &kp A
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
     &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
                             >;
