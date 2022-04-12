@@ -23,14 +23,22 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp RALT>, <&none>, <&kp RALT>;
             };
-        tdhm: Home-Row-Mod-Bracket-GUI {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Homerow Bracket-GUI";
+        hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>;
-                bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
-                // <&kp RBKT none>
-            };       
+                tapping_term_ms = <300>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            }; 
+        // tdhm: Home-Row-Mod-Bracket-GUI {
+        //         compatible = "zmk,behavior-tap-dance";
+        //         label = "Homerow Bracket-GUI";
+        //         #binding-cells = <2>;
+        //         tapping-term-ms = <200>;
+        //         bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
+        //         // <&kp RBKT none>
+        //     };       
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Comma Backslash";
@@ -144,7 +152,7 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
-    &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &tdhm
+    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &hm RSHFT J   &hm RCTRL K  &hm LALT L  &kp A
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
     &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
                             >;
