@@ -1,183 +1,183 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+    /*
+    * Copyright (c) 2020 The ZMK Contributors
+    *
+    * SPDX-License-Identifier: MIT
+    */
 
-// This key-map file WILL NOT WORK FOR YOU, you will need to modify it. I really do not recommend adapting to it.
-// This key-map file is set-up to be the split space layout.
-// I strongly urge you to customise your firmware to suit your usage.
-// Please feel free to join the ZMK server at https://discord.gg/TdRMQaTYdF for help.
+    // This key-map file WILL NOT WORK FOR YOU, you will need to modify it. I really do not recommend adapting to it.
+    // This key-map file is set-up to be the split space layout.
+    // I strongly urge you to customise your firmware to suit your usage.
+    // Please feel free to join the ZMK server at https://discord.gg/TdRMQaTYdF for help.
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
+    #include <behaviors.dtsi>
+    #include <dt-bindings/zmk/keys.h>
+    #include <dt-bindings/zmk/bt.h>
 
-/ {
+    / {
 
-behaviors {
-    ld: gamer_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RALT>, <&none>, <&kp RALT>;
+    behaviors {
+        ld: gamer_dance {
+                compatible = "zmk,behavior-tap-dance";
+                label = "LAYER_DANCE";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp RALT>, <&none>, <&kp RALT>;
+            };
+        tdhm: Home-Row-Mod-Bracket-GUI {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow Bracket-GUI";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
+                // <&kp RBKT none>
+            };       
+        tdcb: Comma-Backslash {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Tap Dance Comma Backslash";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp COMMA>, <&kp BSLH>;
+            };
+        tdds: Dot-Slash {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Tap Dance Dot Slash";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp DOT>, <&kp FSLH>;
+            };
+        tdqs: Quote-Semicolon {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Tap Dance Quote Semicolon";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp APOS>, <&kp SEMI>;
+            };
+        tdf1: Fone-Ffour {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_tap";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp F1>, <&kp F2>, <&kp F3>, <&kp F4>;
+            };
+        tdf5: Ffive-Feight {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_F5";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp F5>, <&kp F6>, <&kp F7>, <&kp F8>;
+            };
+        tdf9: Fnine-Ftwelve {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_F9";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp F9>, <&kp F10>, <&kp F11>, <&kp F12>;
+            };
         };
-    tdhm: Home-Row-Mod-Bracket-GUI {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Homerow Bracket-GUI";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
-            // <&kp RBKT none>
-        };       
-    tdcb: Comma-Backslash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Tap Dance Comma Backslash";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COMMA>, <&kp BSLH>;
+            
+        combos {
+        compatible = "zmk,combos";
+        combo_LYR1 {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&to 1>;
         };
-    tdds: Dot-Slash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Tap Dance Dot Slash";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp FSLH>;
+        combo_LYR2 {
+            timeout-ms = <50>;
+            key-positions = <33 35>;
+            bindings = <&to 2>;
         };
-    tdqs: Quote-Semicolon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Tap Dance Quote Semicolon";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp APOS>, <&kp SEMI>;
+        combo_LSHFT1 {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp LSHFT>;
+            layers = <1>;
         };
-    tdf1: Fone-Ffour {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F1>, <&kp F2>, <&kp F3>, <&kp F4>;
+        combo_LSHFT2 {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp LSHFT>;
+            layers = <1>;
         };
-    tdf5: Ffive-Feight {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_F5";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F5>, <&kp F6>, <&kp F7>, <&kp F8>;
+        combo_LNG {
+            timeout-ms = <50>;
+            key-positions = <11 16>;
+            bindings = <&kp LA(LSHFT)>;
+            layers = <0>;
         };
-    tdf9: Fnine-Ftwelve {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_F9";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F9>, <&kp F10>, <&kp F11>, <&kp F12>;
+        combo_CAPS {
+            timeout-ms = <50>;
+            key-positions = <13 16>;
+            bindings = <&kp CAPS>;
+            layers = <0>;
         };
-      };
-        
-    combos {
-    compatible = "zmk,combos";
-    combo_LYR1 {
-        timeout-ms = <50>;
-        key-positions = <34 35>;
-        bindings = <&to 1>;
-    };
-    combo_LYR2 {
-        timeout-ms = <50>;
-        key-positions = <33 35>;
-        bindings = <&to 2>;
-    };
-    combo_LSHFT1 {
-        timeout-ms = <50>;
-        key-positions = <10 11>;
-        bindings = <&kp LSHFT>;
-        layers = <1>;
-    };
-    combo_LSHFT2 {
-        timeout-ms = <50>;
-        key-positions = <18 19>;
-        bindings = <&kp LSHFT>;
-        layers = <1>;
-    };
-    combo_LNG {
-        timeout-ms = <50>;
-        key-positions = <11 16>;
-        bindings = <&kp LA(LSHFT)>;
-        layers = <0>;
-    };
-    combo_CAPS {
-        timeout-ms = <50>;
-        key-positions = <13 16>;
-        bindings = <&kp CAPS>;
-        layers = <0>;
-    };
-    combo_bspc {
-        timeout-ms = <50>;
-        key-positions = <8 9>;
-        bindings = <&kp BKSP>;
-        layers = <0 1>;
-    };
-    combo_tab {
-        timeout-ms = <50>;
-        key-positions = <0 1>;
-        bindings = <&kp TAB>;
-        layers = <0 1>;
-
-    };
-    combo_esc {
-        timeout-ms = <50>;
-        key-positions = <1 2>;
-        bindings = <&kp ESC>;
-        layers = <0 1>;
-
-    };
-};
-
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |  H  |  J   |  K  |  L  |  [  |
-// |  Z  |  X  |  C  |  V  |  B   |  N  |  M   |  ,  |  .  |  '  |
-//             | CTL | ALT |  SPC | ENT | GUI  | LYR |
-                        bindings = <
-   &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
-   &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &tdhm
-   &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
-   &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
-                        >;
-                };
-
-                sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  7  |  8  |  9  |  0  |  Cut   |  Home  |  PGDN |  Up   |  PGUP  |  End  |
-// |  4  |  5  |  6  |  -  |  Copy  |  Ins   |  Left |  Down |  Right |  Del  |
-// |  1  |  2  |  3  |  =  |  Paste |  Cntxt |  LNG  |  ,    |  .     |  '    |
-//             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
-                        bindings = <
-   &kp N7  &kp N8  &kp N9  &kp N0     &kp LC(X)   &kp HOME    &kp PG_DN  &kp UP    &kp PG_UP  &kp END    
-   &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LC(C)   &kp INS     &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL
-   &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp LC(V)   &kp K_APP   &none      &trans    &trans     &trans
-   &trans  &trans  &trans  &trans     &trans      &to 0
-                        >;
-                };
-
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR | RST | BOOT | XXXX | XXXX | XXXX | F9-12 | VolDn | Mute | VolUp |
-// | BT3  | BT4 | XXXX | XXXX | XXXX | XXXX | F5-8  | Prev  | Ply  | Next  |
-// | BT0  | BT1 | BT2  | XXXX | XXXX | XXXX | F1-4  | BrtDn | XXXX | BrtUp |
-//             | CTL | ALT |  SPC | ENT | GUI  | LYR |
-                        bindings = <
-   &bt BT_CLR   &reset        &bootloader   &none  &none  &ld  &tdf9  &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP
-   &bt BT_SEL 3 &bt BT_SEL 4  &none         &none  &none  &none  &tdf5  &kp C_PREV    &kp C_PP   &kp C_NEXT
-   &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none  &tdf1  &kp C_BRI_DN  &none      &kp C_BRI_UP
-   &trans       &trans        &trans        &trans &trans &to 0
-                        >;
-                };
-
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp BKSP>;
+            layers = <0 1>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp TAB>;
+            layers = <0 1>;
 
         };
-};
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
+            layers = <0 1>;
+
+        };
+    };
+
+            keymap {
+                    compatible = "zmk,keymap";
+
+                    default_layer {
+    // -----------------------------------------------------------------------------------------
+    // |  Q  |  W  |  E  |  R  |  T   |  Y  |  U   |  I  |  O  |  P  |
+    // |  A  |  S  |  D  |  F  |  G   |  H  |  J   |  K  |  L  |  [  |
+    // |  Z  |  X  |  C  |  V  |  B   |  N  |  M   |  ,  |  .  |  '  |
+    //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
+                            bindings = <
+    &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
+    &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &tdhm
+    &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
+    &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
+                            >;
+                    };
+
+                    sym_layer {
+    // -----------------------------------------------------------------------------------------
+    // |  7  |  8  |  9  |  0  |  Cut   |  Home  |  PGDN |  Up   |  PGUP  |  End  |
+    // |  4  |  5  |  6  |  -  |  Copy  |  Ins   |  Left |  Down |  Right |  Del  |
+    // |  1  |  2  |  3  |  =  |  Paste |  Cntxt |  LNG  |  ,    |  .     |  '    |
+    //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
+                            bindings = <
+    &kp N7  &kp N8  &kp N9  &kp N0     &kp LC(X)   &kp HOME    &kp PG_DN  &kp UP    &kp PG_UP  &kp END    
+    &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LC(C)   &kp INS     &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL
+    &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp LC(V)   &kp K_APP   &none      &trans    &trans     &trans
+    &trans  &trans  &trans  &trans     &trans      &to 0
+                            >;
+                    };
+
+                    nav_layer {
+    // -----------------------------------------------------------------------------------------
+    // |BTCLR | RST | BOOT | XXXX | XXXX | XXXX | F9-12 | VolDn | Mute | VolUp |
+    // | BT3  | BT4 | XXXX | XXXX | XXXX | XXXX | F5-8  | Prev  | Ply  | Next  |
+    // | BT0  | BT1 | BT2  | XXXX | XXXX | XXXX | F1-4  | BrtDn | XXXX | BrtUp |
+    //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
+                            bindings = <
+    &bt BT_CLR   &reset        &bootloader   &none  &none  &ld  &tdf9  &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP
+    &bt BT_SEL 3 &bt BT_SEL 4  &none         &none  &none  &none  &tdf5  &kp C_PREV    &kp C_PP   &kp C_NEXT
+    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none  &tdf1  &kp C_BRI_DN  &none      &kp C_BRI_UP
+    &trans       &trans        &trans        &trans &trans &to 0
+                            >;
+                    };
+
+
+            };
+    };
