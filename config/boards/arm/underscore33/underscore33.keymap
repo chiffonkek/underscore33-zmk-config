@@ -30,7 +30,7 @@ behaviors {
             label = "LAYER_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RALT>, <&none>,  <&tog 2>;
+            bindings = <&kp RALT>, <&none>, <&kp RALT>;
         };
       };
         
