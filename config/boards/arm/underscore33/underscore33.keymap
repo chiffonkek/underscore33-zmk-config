@@ -24,7 +24,7 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        gresc: grave_escape {
+        grescp: grave_escape {
                 compatible = "zmk,behavior-mod-morph";
                 label = "GRAVE_ESCAPE";
                 #binding-cells = <0>;
@@ -141,7 +141,7 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&gresc>;
+            bindings = <&grescp>;
             layers = <0 1>;
 
         };
