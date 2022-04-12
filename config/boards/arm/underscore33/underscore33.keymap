@@ -26,9 +26,10 @@ behaviors {
     tdhm: Home-Row-Mod-Bracket-GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "Homerow Bracket-GUI";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RGUI LBKT>, <&mt LGUI LBKT>; // <&kp RBKT none>
+            bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
+            // <&kp RBKT none>
         };       
     tdcb: Comma-Backslash {
             compatible = "zmk,behavior-tap-dance";
