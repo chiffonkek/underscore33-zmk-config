@@ -51,7 +51,7 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp APOS>, <&kp SEMI>;
       };
-      tdddd: 1 {
+      tdddd: F1-F4 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_tap";
             #binding-cells = <0>;
