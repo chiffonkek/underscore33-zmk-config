@@ -16,17 +16,6 @@
 / {
 
 behaviors {
-      hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping_term_ms = <300>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-      };
-      };
-
-behaviors {
      ld: gamer_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
@@ -106,7 +95,7 @@ behaviors {
 //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                         bindings = <
    &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
-   &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H  &hm RSHFT J   &hm RCTRL K  &hm LALT L  &ld
+   &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &ld
    &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &ld     &ld      &ld
    &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
                         >;
