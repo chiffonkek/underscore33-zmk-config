@@ -31,14 +31,14 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        // tdhm: Home-Row-Mod-Bracket-GUI {
-        //         compatible = "zmk,behavior-tap-dance";
-        //         label = "Homerow Bracket-GUI";
-        //         #binding-cells = <2>;
-        //         tapping-term-ms = <200>;
-        //         bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
-        //         // <&kp RBKT none>
-        //     };       
+        tdddd: wow {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow Bracket-GUI";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                bindings = <&mt RGUI LBKT>, <&mt LGUI RBKT>; 
+                // <&kp RBKT none>
+            };       
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Comma Backslash";
