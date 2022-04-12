@@ -42,7 +42,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Grave Escape";
                 #binding-cells = <0>;
-                tapping-term-ms = <400>;
+                tapping-term-ms = <200>;
                 bindings = <&kp ESC>, <&kp GRAVE>;
             };       
         tdcb: Comma-Backslash {
