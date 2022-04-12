@@ -22,8 +22,7 @@ behaviors {
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RALT>, <&none>, <&kp RALT>;
-        };
-      };
+        }; 
     tdhm: Home-Row-Mod-Bracket-GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "Homerow Bracket-GUI";
@@ -31,6 +30,7 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&mt RGUI LBKT>, <&kp RBKT 0>;
       };   
+      };
     combos {
     compatible = "zmk,combos";
     combo_LYR1 {
