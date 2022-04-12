@@ -30,6 +30,20 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp BSLH>;
       };
+      tdds: Dot-Slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance Dot Slash";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp FSLH>;
+      };
+      tdqs: Quote-Semicolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance Quote Semicolon";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp APOS>, <&kp SEMI>;
+      };
       };
         
     combos {
@@ -102,7 +116,7 @@ behaviors {
                         bindings = <
    &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y  &kp U         &kp I        &kp O       &kp P
    &kp Q &kp Q &kp Q &kp Q &kp G    &kp H  &kp Q   &kp Q  &kp Q  &ld
-   &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &ld     &ld      &ld
+   &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N  &kp M         &tdcb     &tdds      &tdqs
    &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
                         >;
                 };
