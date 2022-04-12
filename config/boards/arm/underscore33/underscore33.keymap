@@ -16,62 +16,62 @@
 / {
 
 behaviors {
-     ld: gamer_dance {
+    ld: gamer_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RALT>, <&none>, <&kp RALT>;
         };
-      tdhm: Home-Row-Mod-Bracket-GUI {
+    tdhm: Home-Row-Mod-Bracket-GUI {
             compatible = "zmk,behavior-tap-dance";
             label = "Homerow Bracket-GUI";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&mt RGUI LBKT>; // <&kp RBKT none>
-    };       
-        tdcb: Comma-Backslash {
+            bindings = <&mt RGUI LBKT>, <&mt RGUI LBKT>; // <&kp RBKT none>
+        };       
+    tdcb: Comma-Backslash {
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Comma Backslash";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp BSLH>;
-      };
-      tdds: Dot-Slash {
+        };
+    tdds: Dot-Slash {
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Dot Slash";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp FSLH>;
-      };
-      tdqs: Quote-Semicolon {
+        };
+    tdqs: Quote-Semicolon {
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance Quote Semicolon";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp APOS>, <&kp SEMI>;
-      };
-      tdf1: Fone-Ffour {
+        };
+    tdf1: Fone-Ffour {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F1>, <&kp F2>, <&kp F3>, <&kp F4>;
-      };
-      tdf5: Ffive-Feight {
+        };
+    tdf5: Ffive-Feight {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_F5";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F5>, <&kp F6>, <&kp F7>, <&kp F8>;
-      };
-      tdf9: Fnine-Ftwelve {
+        };
+    tdf9: Fnine-Ftwelve {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_F9";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp F9>, <&kp F10>, <&kp F11>, <&kp F12>;
-      };
+        };
       };
         
     combos {
