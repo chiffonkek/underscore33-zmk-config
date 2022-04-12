@@ -29,7 +29,7 @@
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <1>;
                 tapping-term-ms = <200>;
-                bindings = <&kp B>; 
+                bindings = <&mt LSHIFT A>; 
                 // <&kp RBKT none>
             };
         tdeg: Escape-Grave {
