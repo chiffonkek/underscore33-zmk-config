@@ -24,7 +24,9 @@ behaviors {
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
       };
-    
+      };
+
+behaviors {
      ld: gamer_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_DANCE";
