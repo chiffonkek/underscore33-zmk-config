@@ -139,7 +139,7 @@
                             bindings = <
     &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_DN       &kp UP          &kp PG_UP       &kp END    
     &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
-    &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &PSCRN          &trans          &trans          &trans
+    &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
     &trans       &trans       &trans        &trans           &trans      &to 0
                             >;
                     };
