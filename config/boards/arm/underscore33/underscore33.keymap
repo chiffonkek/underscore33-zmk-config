@@ -30,13 +30,6 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&hm RGUI LBKT>, <&kp RBKT>;
-            };    
-        tdlbrb: Left-Bracket-Right-Bracket-Layer2 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Tap Dance Dot Slash";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp LBKT>, <&kp RBKT>;
             };
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
@@ -94,24 +87,6 @@
             key-positions = <33 35>;
             bindings = <&to 2>;
         };
-        combo_LSHFT1 {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp LSHFT>;
-            layers = <1>;
-        };
-        combo_LSHFT2 {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp LSHFT>;
-            layers = <1>;
-        };
-        combo_LNG {
-            timeout-ms = <50>;
-            key-positions = <11 16>;
-            bindings = <&kp LA(LSHFT)>;
-            layers = <0>;
-        };
         combo_CAPS {
             timeout-ms = <50>;
             key-positions = <13 16>;
@@ -129,14 +104,12 @@
             key-positions = <0 1>;
             bindings = <&kp TAB>;
             layers = <0 1>;
-
         };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&gresc>;
             layers = <0 1>;
-
         };
     };
 
@@ -157,21 +130,21 @@
                             >;
                     };
 
-                    sym_layer {
+                    numnav_layer {
     // -----------------------------------------------------------------------------------------
     // |  7  |  8  |  9  |  0  |  Cut   |  Home  |  PGDN |  Up   |  PGUP  |  End  |
     // |  4  |  5  |  6  |  -  |  Copy  |  Ins   |  Left |  Down |  Right |  Del  |
     // |  1  |  2  |  3  |  =  |  Paste |  Cntxt |  LNG  |  ,    |  .     |  '    |
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
-    &kp N7  &kp N8  &kp N9  &kp N0     &kp LC(X)   &kp HOME    &kp PG_DN  &kp UP    &kp PG_UP  &kp END    
-    &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LC(C)   &kp INS     &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL
-    &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp LC(V)   &kp K_APP   &tdlbrb      &trans    &trans     &trans
-    &trans  &trans  &trans  &trans     &trans      &to 0
+    &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_DN       &kp UP          &kp PG_UP       &kp END    
+    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
+    &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &PSCRN          &trans          &trans          &trans
+    &trans       &trans       &trans        &trans           &trans      &to 0
                             >;
                     };
 
-                    nav_layer {
+                    sys_layer {
     // -----------------------------------------------------------------------------------------
     // |BTCLR | RST | BOOT | XXXX | XXXX | XXXX | F9-12 | VolDn | Mute | VolUp |
     // | BT3  | BT4 | XXXX | XXXX | XXXX | XXXX | F5-8  | Prev  | Ply  | Next  |
