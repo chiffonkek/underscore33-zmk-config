@@ -161,8 +161,8 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp F7      &kp F8       &kp F9        &kp F12        &sk LCTRL  &sk LGUI                &trans  &trans  &trans &trans
-    &hm LGUI F4 &hm LALT F5  &hm LCTRL F6  &hm LSHFT F11  &sk LALT   &sk LC(LS(LA))          &trans  &trans  &trans &trans
-    &kp F1      &kp F2       &kp F3        &kp F10        &sk LSHIFT &sk LG(LS(LA(LCTRL)))   &trans  &trans  &trans &trans
+    &hm LGUI F4 &hm LALT F5  &hm LCTRL F6  &hm LSHFT F11  &sk LALT   &sk LC(LS(LALT))          &trans  &trans  &trans &trans
+    &kp F1      &kp F2       &kp F3        &kp F10        &sk LSHIFT &sk LC(LS(LA(LGUI)))   &trans  &trans  &trans &trans
     &to 0       &trans       &trans        &trans         &trans &to 0
                             >;
                     };
