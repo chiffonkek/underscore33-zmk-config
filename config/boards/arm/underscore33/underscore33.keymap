@@ -14,6 +14,9 @@
     #include <dt-bindings/zmk/bt.h>
 
     / {
+        &sk {
+    release-after-ms = <2000>;
+            };
     behaviors {
         hm: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
@@ -87,14 +90,19 @@
             key-positions = <33 35>;
             bindings = <&to 2>;
         };
-        combo_CAPS {
+        combo_LYR3 {
             timeout-ms = <50>;
+            key-positions = <32 35>;
+            bindings = <&to 3>;
+        };
+        combo_CAPS {
+            timeout-ms = <25>;
             key-positions = <13 16>;
             bindings = <&kp CAPS>;
             layers = <0>;
         };
         combo_bspc {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             key-positions = <8 9>;
             bindings = <&kp BKSP>;
             layers = <0 1>;
@@ -106,7 +114,7 @@
             layers = <0 1>;
         };
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             key-positions = <1 2>;
             bindings = <&gresc>;
             layers = <0 1>;
@@ -126,7 +134,7 @@
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y   &kp U         &kp I        &kp O       &kp P
     &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdhm
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N   &kp M         &tdcb        &tdds       &tdqs
-    &kp LCTRL  &kp LALT   &kp SPC     &kp RET     &kp RGUI &to 0
+    &to 0      &mo 2      &lt 1 SPC   &lt 1 RET   &mo 2    &to 0
                             >;
                     };
 
@@ -137,13 +145,27 @@
     // |  1  |  2  |  3  |  =  |  Paste |  Cntxt |  LNG  |  ,    |  .     |  '    |
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
-    &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_DN       &kp UP          &kp PG_UP       &kp END    
+    &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_UP       &kp UP          &kp PG_DN       &kp END    
     &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
     &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
-    &trans       &trans       &trans        &trans           &trans      &to 0
+    &to 0        &trans       &trans        &trans           &trans      &to 0
                             >;
                     };
 
+                    FandM_layer {
+    // -----------------------------------------------------------------------------------------
+    // |BTCLR | RST | BOOT | XXXX | XXXX | XXXX | F9-12 | VolDn | Mute | VolUp |
+    // | BT3  | BT4 | XXXX | XXXX | XXXX | XXXX | F5-8  | Prev  | Ply  | Next  |
+    // | BT0  | BT1 | BT2  | XXXX | XXXX | XXXX | F1-4  | BrtDn | XXXX | BrtUp |
+    //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
+                            bindings = <
+    &kp F7      &kp F8       &kp F9        &kp F12        &sk LCTRL  &sk LGUI                &trans  &trans  &trans &trans
+    &hm LGUI F4 &hm LALT F5  &hm LCTRL F6  &hm LSHFT F11  &sk LALT   &sk LC(LS(LA))          &trans  &trans  &trans &trans
+    &kp F1      &kp F2       &kp F3        &kp F10        &sk LSHIFT &sk LG(LS(LA(LCTRL)))   &trans  &trans  &trans &trans
+    &to 0       &trans       &trans        &trans         &trans &to 0
+                            >;
+                    };
+    
                     sys_layer {
     // -----------------------------------------------------------------------------------------
     // |BTCLR | RST | BOOT | XXXX | XXXX | XXXX | F9-12 | VolDn | Mute | VolUp |
