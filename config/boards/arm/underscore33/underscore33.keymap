@@ -56,6 +56,15 @@
                 tapping-term-ms = <170>;
                 bindings = <&kp APOS>, <&kp SEMI>;
             };
+            
+          0del: Base-Layer-Del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Base Layer Delete";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            };
+         
         };
             
         combos {
@@ -84,7 +93,7 @@
         combo_bspc {
             timeout-ms = <30>;
             key-positions = <8 9>;
-            bindings = <&kp BKSP>;
+            bindings = <&0del>;
             layers = <0 1>;
         };
         combo_tab {
