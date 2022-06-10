@@ -23,8 +23,8 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping_term_ms = <200>;
-                quick_tap_ms = <200>;
+                tapping_term_ms = <170>;
+                quick_tap_ms = <70>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
@@ -32,50 +32,29 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <170>;
                 bindings = <&hm RGUI LBKT>, <&kp RBKT>;
             };
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Comma Backslash";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <170>;
                 bindings = <&kp COMMA>, <&kp BSLH>;
             };
         tdds: Dot-Slash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Dot Slash";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <170>;
                 bindings = <&kp DOT>, <&kp FSLH>;
             };
         tdqs: Quote-Semicolon {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Quote Semicolon";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <170>;
                 bindings = <&kp APOS>, <&kp SEMI>;
-            };
-        tdf1: Fone-Ffour {
-                compatible = "zmk,behavior-tap-dance";
-                label = "tap_tap";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp F1>, <&kp F2>, <&kp F3>, <&kp F4>;
-            };
-        tdf5: Ffive-Feight {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_F5";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp F5>, <&kp F6>, <&kp F7>, <&kp F8>;
-            };
-        tdf9: Fnine-Ftwelve {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_F9";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp F9>, <&kp F10>, <&kp F11>, <&kp F12>;
             };
         };
             
@@ -97,13 +76,13 @@
             bindings = <&to 3>;
         };
         combo_CAPS {
-            timeout-ms = <25>;
+            timeout-ms = <50>;
             key-positions = <13 16>;
             bindings = <&kp CAPS>;
             layers = <0>;
         };
         combo_bspc {
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             key-positions = <8 9>;
             bindings = <&kp BKSP>;
             layers = <0 1>;
@@ -115,11 +94,23 @@
             layers = <0 1>;
         };
         combo_esc {
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&gresc>;
             layers = <0 1>;
         };
+        combo_wordleft {
+            timeout-ms = <30>;
+            key-positions = <17 18>;
+            bindings = <&kp LC(left)>;
+            layers = <0>;
+        };    
+        combo_wordright {
+            timeout-ms = <30>;
+            key-positions = <18 19>;
+            bindings = <&kp LC(word)>;
+            layers = <0>;
+        };           
     };
 
             keymap {
