@@ -101,14 +101,14 @@
         };
         combo_wordleft {
             timeout-ms = <30>;
-            key-positions = <17 18>;
-            bindings = <&kp LC(left)>;
+            key-positions = <16 17>;
+            bindings = <&kp LC(LEFT)>;
             layers = <0>;
         };    
         combo_wordright {
             timeout-ms = <30>;
-            key-positions = <18 19>;
-            bindings = <&kp LC(word)>;
+            key-positions = <17 18>;
+            bindings = <&kp LC(RIGHT)>;
             layers = <0>;
         };           
     };
