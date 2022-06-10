@@ -109,8 +109,37 @@
             timeout-ms = <30>;
             key-positions = <17 18>;
             bindings = <&kp LC(RIGHT)>;
-            layers = <0>;
-        };           
+            layers = <0>;            
+        };
+        
+        combo_home {
+            timeout-ms = <30>;
+            key-positions = <7 16>;
+            bindings = <&kp HOME>;
+            layers = <0>;            
+        };     
+        
+        combo_end {
+            timeout-ms = <30>;
+            key-positions = <7 18>;
+            bindings = <&kp END>;
+            layers = <0>;            
+        };         
+        
+        combo_pgup {
+            timeout-ms = <30>;
+            key-positions = <7 16 18>;
+            bindings = <&kp PG_UP>;
+            layers = <0>;            
+        };   
+        
+        combo_pgdown {
+            timeout-ms = <30>;
+            key-positions = <16 17 18>;
+            bindings = <&kp PG_DN>;
+            layers = <0>;            
+        };        
+                
     };
 
             keymap {
