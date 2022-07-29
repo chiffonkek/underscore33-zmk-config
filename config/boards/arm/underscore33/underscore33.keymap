@@ -33,28 +33,28 @@
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm RGUI LBKT>, <&kp RBKT>;
+                bindings = <&hm LGUI LBKT>, <&kp RBKT>;
             };
         tdhmL: Homerow_Mod_Tap_Dance_LEFT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow SHIFT-LEFT";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm RSHFT LEFT>, <&kp LEFT>;
+                bindings = <&hm LSHFT LEFT>, <&kp LEFT>;
             };     
         tdhmD: Homerow_Mod_Tap_Dance_DOWN {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow CONTROL-DOWN";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm RCTRL DOWN>, <&kp DOWN>;
+                bindings = <&hm LCTRL DOWN>, <&kp DOWN>;
             }; 
         tdhmR: Homerow_Mod_Tap_Dance_RIGHT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow ALT-RIGHT";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm RALT RIGHT>, <&kp RIGHT>;
+                bindings = <&hm LALT RIGHT>, <&kp RIGHT>;
             };
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
@@ -183,7 +183,7 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y   &kp U         &kp I        &kp O       &kp P
-    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm RALT L  &tdhmrbkt
+    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm LSHFT J   &hm LCTRL K  &hm LALT L  &tdhmrbkt
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N   &kp M         &tdcb        &tdds       &tdqs
     &to 0      &mo 2      &lt 1 SPC   &lt 1 RET   &mo 2    &to 0
                             >;
