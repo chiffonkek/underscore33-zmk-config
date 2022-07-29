@@ -77,7 +77,7 @@
                 tapping-term-ms = <170>;
                 bindings = <&kp APOS>, <&kp SEMI>;
             };
-            
+             
         odel: Base-Layer-Del {
                 compatible = "zmk,behavior-mod-morph";
                 label = "Base Layer Delete";
