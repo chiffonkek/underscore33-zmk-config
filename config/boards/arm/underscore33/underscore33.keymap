@@ -28,7 +28,7 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        tdhmrbkt: Homerow-Mod-Tap-Dance-RBKT {
+        tdhmrbkt: Homerow_Mod_Tap_Dance_RBKT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
