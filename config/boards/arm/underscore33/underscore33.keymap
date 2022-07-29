@@ -28,28 +28,28 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        tdhmrbkt: Homerow-Mod-Tap-Dance RBKT {
+        tdhmrbkt: Homerow-Mod-Tap-Dance-RBKT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RGUI LBKT>, <&kp RBKT>;
             };
-        tdhmL: Homerow-Mod-Tap-Dance LEFT {
+        tdhmL: Homerow-Mod-Tap-Dance-LEFT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RSHFT LEFT>, <&kp LEFT>;
             };     
-        tdhmD: Homerow-Mod-Tap-Dance DOWN {
+        tdhmD: Homerow-Mod-Tap-Dance-DOWN {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RCTRL DOWN>, <&kp DOWN>;
             }; 
-        tdhmR: Homerow-Mod-Tap-Dance RIGHT {
+        tdhmR: Homerow-Mod-Tap-Dance-RIGHT {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
