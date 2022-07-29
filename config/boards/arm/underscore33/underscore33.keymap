@@ -37,21 +37,21 @@
             };
         tdhmL: Homerow_Mod_Tap_Dance_LEFT {
                 compatible = "zmk,behavior-tap-dance";
-                label = "Homerow Bracket-GUI";
+                label = "Homerow SHIFT-LEFT";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RSHFT LEFT>, <&kp LEFT>;
             };     
         tdhmD: Homerow_Mod_Tap_Dance_DOWN {
                 compatible = "zmk,behavior-tap-dance";
-                label = "Homerow Bracket-GUI";
+                label = "Homerow CONTROL-DOWN";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RCTRL DOWN>, <&kp DOWN>;
             }; 
         tdhmR: Homerow_Mod_Tap_Dance_RIGHT {
                 compatible = "zmk,behavior-tap-dance";
-                label = "Homerow Bracket-GUI";
+                label = "Homerow ALT-RIGHT";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RALT RIGHT>, <&kp RIGHT>;
