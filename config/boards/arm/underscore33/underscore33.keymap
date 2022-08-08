@@ -24,37 +24,16 @@
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
                 tapping_term_ms = <170>;
-                quick_tap_ms = <70>;
+                quick_tap_ms = <200>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        tdhmrbkt: Homerow_Mod_Tap_Dance_RBKT {
+        tdhm: Homerow-Mod-Tap-Dance {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm LGUI LBKT>, <&kp RBKT>;
-            };
-        tdhmL: Homerow_Mod_Tap_Dance_LEFT {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Homerow SHIFT-LEFT";
-                #binding-cells = <0>;
-                tapping-term-ms = <170>;
-                bindings = <&hm LSHFT LEFT>, <&kp LEFT>;
-            };     
-        tdhmD: Homerow_Mod_Tap_Dance_DOWN {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Homerow CONTROL-DOWN";
-                #binding-cells = <0>;
-                tapping-term-ms = <170>;
-                bindings = <&hm LCTRL DOWN>, <&kp DOWN>;
-            }; 
-        tdhmR: Homerow_Mod_Tap_Dance_RIGHT {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Homerow ALT-RIGHT";
-                #binding-cells = <0>;
-                tapping-term-ms = <170>;
-                bindings = <&hm LALT RIGHT>, <&kp RIGHT>;
+                bindings = <&hm RGUI LBKT>, <&kp RBKT>;
             };
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
@@ -77,15 +56,6 @@
                 tapping-term-ms = <170>;
                 bindings = <&kp APOS>, <&kp SEMI>;
             };
-             
-        odel: Base-Layer-Del {
-                compatible = "zmk,behavior-mod-morph";
-                label = "Base Layer Delete";
-                #binding-cells = <0>;
-                bindings = <&kp BSPC>, <&kp DEL>;
-                mods = <(MOD_LGUI|MOD_RGUI)>;
-            };
-         
         };
             
         combos {
@@ -114,7 +84,7 @@
         combo_bspc {
             timeout-ms = <30>;
             key-positions = <8 9>;
-            bindings = <&odel>;
+            bindings = <&kp BKSP>;
             layers = <0 1>;
         };
         combo_tab {
@@ -183,7 +153,7 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y   &kp U         &kp I        &kp O       &kp P
-    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm LSHFT J   &hm LCTRL K  &hm LALT L  &tdhmrbkt
+    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdhm
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N   &kp M         &tdcb        &tdds       &tdqs
     &to 0      &mo 2      &lt 1 SPC   &lt 1 RET   &mo 2    &to 0
                             >;
@@ -197,7 +167,7 @@
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
     &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_UP       &kp UP          &kp PG_DN       &kp END    
-    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &tdhmL          &tdhmD          &tdhmR          &trans
+    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
     &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
     &to 0        &trans       &trans        &trans           &trans      &to 0
                             >;
