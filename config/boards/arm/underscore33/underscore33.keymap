@@ -186,8 +186,8 @@
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
     AS(N7)       AS(N8)       AS(N9)        AS(N0)           &kp LC(X)   &kp HOME    &kp PG_UP       &kp UP          &kp PG_DN       &kp END    
-    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &tdhmuds         &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
-    &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
+    &hm LGUI N4  &hm LALT AS(N5)  &hm LCTRL N6  &tdhmuds         &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
+    AS(N1)       AS(N2)       AS(N3)        AS(EQUAL)        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
     &to 0        &trans       &trans        &trans           &trans      &to 0
                             >;
                     };
