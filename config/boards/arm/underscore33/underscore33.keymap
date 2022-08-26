@@ -59,21 +59,21 @@
                 label = "Tap Dance Comma Backslash";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&kp COMMA>, <&kp BSLH>;
+                bindings = <&as LS(COMMA) COMMA>, <&as LS(BSLH) BSLH>;
             };
         tdds: Dot-Slash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Dot Slash";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&kp DOT>, <&kp FSLH>;
+                bindings = <&as LS(DOT) DOT>, <&as LS(FSLH) FSLH>;
             };
         tdqs: Quote-Semicolon {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Quote Semicolon";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&kp APOS>, <&kp SEMI>;
+                bindings = <&as LS(APOS) APOS>, <&as LS(SEMI) SEMI>;
             };
         };
             
