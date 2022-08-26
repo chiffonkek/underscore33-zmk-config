@@ -28,12 +28,19 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             }; 
-        tdhm: Homerow-Mod-Tap-Dance {
+        tdhmbkt: Homerow-Mod-Tap-Dance-Bracket {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&hm RGUI LBKT>, <&kp RBKT>;
+            };
+        tdhmuds: Homerow-Mod-Tap-Dance-Underscore {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow Minus-Underscore";
+                #binding-cells = <0>;
+                tapping-term-ms = <170>;
+                bindings = <&hm LSHFT MINUS>, <&kp UNDER>;
             };
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
@@ -153,7 +160,7 @@
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y   &kp U         &kp I        &kp O       &kp P
-    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdhm
+    &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdhmbkt
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N   &kp M         &tdcb        &tdds       &tdqs
     &to 0      &mo 2      &lt 1 SPC   &lt 1 RET   &mo 2    &to 0
                             >;
@@ -167,7 +174,7 @@
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
     &kp N7       &kp N8       &kp N9        &kp N0           &kp LC(X)   &kp HOME    &kp PG_UP       &kp UP          &kp PG_DN       &kp END    
-    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT MINUS  &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
+    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &tdhmuds         &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
     &kp N1       &kp N2       &kp N3        &kp EQUAL        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
     &to 0        &trans       &trans        &trans           &trans      &to 0
                             >;
