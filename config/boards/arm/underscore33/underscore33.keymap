@@ -39,7 +39,39 @@
                 quick_tap_ms = <200>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
-            }; 
+            };
+            
+            
+       tdhmfour: Homerow-Mod-Tap-Dance-Four {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow GUI-Four";
+                #binding-cells = <0>;
+                tapping-term-ms = <170>;
+                bindings = <&hm LGUI N4>, <&kp DOLLAR>;
+            };
+        tdhmfive: Homerow-Mod-Tap-Dance-Five {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow GUI-Five";
+                #binding-cells = <0>;
+                tapping-term-ms = <170>;
+                bindings = <&hm LALT N5>, <&kp PERCENT>;
+            };
+        tdhmsix: Homerow-Mod-Tap-Dance-Six {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow GUI-Six";
+                #binding-cells = <0>;
+                tapping-term-ms = <170>;
+                bindings = <&hm LCTRL N6>, <&kp PERCENT>;
+            };
+        tdhmmin: Homerow-Mod-Tap-Dance-Minus {
+                compatible = "zmk,behavior-tap-dance";
+                label = "Homerow Shift-Minus";
+                #binding-cells = <0>;
+                tapping-term-ms = <170>;
+                bindings = <&hm LSHFT MINUS>, <&kp UNDER>;
+            };     
+            
+           
         tdhmbkt: Homerow-Mod-Tap-Dance-Bracket {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Homerow Bracket-GUI";
@@ -47,13 +79,8 @@
                 tapping-term-ms = <170>;
                 bindings = <&hm RGUI LBKT>, <&as LS(RBKT) RBKT>;
             };
-        tdhmuds: Homerow-Mod-Tap-Dance-Underscore {
-                compatible = "zmk,behavior-tap-dance";
-                label = "Homerow Minus-Underscore";
-                #binding-cells = <0>;
-                tapping-term-ms = <170>;
-                bindings = <&hm LSHFT MINUS>, <&kp UNDER>;
-            };
+
+
         tdcb: Comma-Backslash {
                 compatible = "zmk,behavior-tap-dance";
                 label = "Tap Dance Comma Backslash";
@@ -186,7 +213,7 @@
     //             | CTL | ALT |  SPC   |  ENT   |  GUI  |  LYR  |
                             bindings = <
     AS(N7)       AS(N8)       AS(N9)        AS(N0)           &kp LC(X)   &kp HOME    &kp PG_UP       &kp UP          &kp PG_DN       &kp END    
-    &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &tdhmuds         &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
+    &tdhmfour    &tdhmfive    &tdhmsix      &tdhmmin         &kp LC(C)   &kp INS     &hm RSHFT LEFT  &hm RCTRL DOWN  &hm RALT RIGHT  &trans
     AS(N1)       AS(N2)       AS(N3)        AS(EQUAL)        &kp LC(V)   &kp DEL     &kp PSCRN       &trans          &trans          &trans
     &to 0        &trans       &trans        &trans           &trans      &to 0
                             >;
