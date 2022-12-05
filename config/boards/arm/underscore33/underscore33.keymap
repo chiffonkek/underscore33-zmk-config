@@ -61,7 +61,7 @@
                 label = "Homerow GUI-Six";
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
-                bindings = <&hm LCTRL N6>, <&kp PERCENT>;
+                bindings = <&hm LCTRL N6>, <&kp CARET>;
             };
         tdhmmin: Homerow-Mod-Tap-Dance-Minus {
                 compatible = "zmk,behavior-tap-dance";
@@ -201,7 +201,7 @@
     &kp Q      &kp W      &kp E       &kp R       &kp T    &kp Y   &kp U         &kp I        &kp O       &kp P
     &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H   &hm RSHFT J   &hm RCTRL K  &hm LALT L  &tdhmbkt
     &kp Z      &kp X      &kp C       &kp V       &kp B    &kp N   &kp M         &tdcb        &tdds       &tdqs
-    &to 0      &mo 2      &lt 1 SPC   &lt 1 RET   &mo 2    &to 0
+    &to 0      &mo 1      &lt 1 SPC   &lt 3 RET   &mo 2    &to 0
                             >;
                     };
 
@@ -226,8 +226,8 @@
     // | BT0  | BT1 | BT2  | XXXX | XXXX | XXXX | F1-4  | BrtDn | XXXX | BrtUp |
     //             | CTL | ALT |  SPC | ENT | GUI  | LYR |
                             bindings = <
-    &kp F7      &kp F8       &kp F9        &kp F12        &sk LCTRL  &sk LGUI                &trans  &trans  &trans &trans
-    &hm LGUI F4 &hm LALT F5  &hm LCTRL F6  &hm LSHFT F11  &sk LALT   &sk LC(LS(LALT))          &trans  &trans  &trans &trans
+    &kp F7      &kp F8       &kp F9        &kp F12        &sk LCTRL  &sk LGUI               &trans  &trans  &trans &trans
+    &hm LGUI F4 &hm LALT F5  &hm LCTRL F6  &hm LSHFT F11  &sk LALT   &sk LC(LS(LALT))       &trans  &trans  &trans &trans
     &kp F1      &kp F2       &kp F3        &kp F10        &sk LSHIFT &sk LC(LS(LA(LGUI)))   &trans  &trans  &trans &trans
     &to 0       &trans       &trans        &trans         &trans &to 0
                             >;
