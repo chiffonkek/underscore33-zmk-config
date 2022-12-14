@@ -22,7 +22,7 @@
     / {
     behaviors {
     
-            as: auto_shift {
+        as: auto_shift {
                 compatible = "zmk,behavior-hold-tap";
                 label = "AUTO_SHIFT";
                 #binding-cells = <2>;
@@ -102,6 +102,10 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <170>;
                 bindings = <&as LS(APOS) APOS>, <&as LS(SEMI) SEMI>;
+            };
+            
+        &gresc {
+                  keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             };
         };
             
