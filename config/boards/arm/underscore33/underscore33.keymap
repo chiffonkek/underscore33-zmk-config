@@ -103,10 +103,6 @@
                 tapping-term-ms = <170>;
                 bindings = <&as LS(APOS) APOS>, <&as LS(SEMI) SEMI>;
             };
-            
-        &gresc {
-                  keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
         };
             
         combos {
@@ -192,6 +188,10 @@
         };        
                 
     };
+    
+&gresc {
+          keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
             keymap {
                     compatible = "zmk,keymap";
