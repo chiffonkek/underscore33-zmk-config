@@ -17,6 +17,10 @@
     &sk {
     release-after-ms = <2000>;
             };
+    &gresc {
+    keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            
 #define AS(keycode) &as LS(keycode) keycode
 
     / {
@@ -188,10 +192,6 @@
         };        
                 
     };
-    
-&gresc {
-          keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
             keymap {
                     compatible = "zmk,keymap";
