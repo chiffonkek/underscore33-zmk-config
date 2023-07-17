@@ -23,8 +23,8 @@
 #define MOUSE 5
 
 #include "../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
-#include "../boards/arm/underscore33/combos.dtsi"  // requires layer aliases
-#include "../boards/arm/underscore33/mouse.dtsi"
+#include "../../boards/arm/underscore33/combos.dtsi"  // requires layer aliases
+#include "../../boards/arm/underscore33/mouse.dtsi"
 
 #define XXX &none
 #define ___ &trans
