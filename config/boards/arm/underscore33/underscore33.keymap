@@ -32,7 +32,7 @@
 /* Global settings */
 
 #define AS(keycode) &as LS(keycode) keycode
-#define QUICK_TAP_MS 150
+#define QUICK_TAP_MS 175
 
 &sk {  // sticky-key config
     release-after-ms = <900>;  // release after 0.6s
@@ -69,8 +69,8 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 // MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_word_left, &kp, &wrdl, KEYS_L THUMBS)    // "    "   "   "
-MAKE_HRM(hmr_word_right, &kp, &wrdr, KEYS_L THUMBS)    // "    "   "   "
+// MAKE_HRM(hmr_word_left, &kp, &word_left, KEYS_L THUMBS)    // "    "   "   "
+// MAKE_HRM(hmr_word_right, &kp, &word_right, KEYS_L THUMBS)    // "    "   "   "
 
 /* Caps-word, num-word and smart-mouse */
 
@@ -130,17 +130,6 @@ ZMK_BEHAVIOR(as, hold_tap,
     bindings = <&kp>, <&kp>;
     )
 
-// tap: word-left | shft + tap: word-left
-ZMK_BEHAVIOR(wrdl, mod_morph,
-    bindings = <&kp LC(LEFT)>, <&kp LC(LS(LEFT))>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-// tap: word-right | shft + tap: word-right
-ZMK_BEHAVIOR(wrdr, mod_morph,
-    bindings = <&kp LC(RIGHT)>, <&kp LC(LS(RIGHT))>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
 // tap: left-parenthesis | shft + tap: less-than
 ZMK_BEHAVIOR(lpar_lt, mod_morph,
     bindings = <&kp LPAR>, <&kp LT>;
@@ -151,21 +140,6 @@ ZMK_BEHAVIOR(lpar_lt, mod_morph,
 ZMK_BEHAVIOR(rpar_gt, mod_morph,
     bindings = <&kp RPAR>, <&kp GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(tdcb, tap_dance,
-    tapping-term-ms = <170>;
-    bindings = <&as LS(COMMA) COMMA>, <&as LS(BSLH) BSLH>;
-)
-
-ZMK_BEHAVIOR(tdds, tap_dance,
-    tapping-term-ms = <170>;
-    bindings = <&as LS(DOT) DOT>, <&as LS(FSLH) FSLH>;
-)
-
-ZMK_BEHAVIOR(tdqs, tap_dance,
-    tapping-term-ms = <170>;
-    bindings = <&as LS(APOS) APOS>, <&as LS(SEMI) SEMI>;
 )
 
 // misc aliases
@@ -180,7 +154,7 @@ ZMK_LAYER(BASE,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &kp G             &kp H         &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L   &hmr RGUI SEMI
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &tdcb         &tdds         &tdqs
+          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp APOS
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                       &to 0         &lt 2 RET     &lt 1 SPC         SMART_NUM     &smart_shft   &mo 3
      //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
