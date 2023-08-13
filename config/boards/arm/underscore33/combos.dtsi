@@ -36,15 +36,17 @@ ZMK_COMBO(LYR3,   &to 3,          RH2 RH1 RH0,               ALL, COMBO_TERM_FAS
 ZMK_COMBO(LYR4,   &tog 4,         LH2 LH1 LH0,               ALL, COMBO_TERM_FAST)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(bspc,   &kp BSPC,       RT3 RT4,        QWERTY NUMNAV, COMBO_TERM_FAST)
-ZMK_COMBO(del,    &kp DEL,        RT0 RT1,        QWERTY NUMNAV, COMBO_TERM_FAST)
-ZMK_COMBO(wrdl,   &kp LC(LEFT),   RM1 RM2,        QWERTY NUMNAV, COMBO_TERM_FAST)
-ZMK_COMBO(wrdr,   &kp LC(RIGHT),  RM2 RM3,        QWERTY NUMNAV, COMBO_TERM_FAST)
+ZMK_COMBO(bspc,   &kp BSPC,       RT4 RT3,        QWERTY NUMNAV, COMBO_TERM_FAST)
+ZMK_COMBO(pgdn,   &kp PG_DN,      RT3 RT2,        QWERTY NUMNAV, COMBO_TERM_SLOW)
+ZMK_COMBO(pgup,   &kp PG_UP,      RT2 RT1,        QWERTY NUMNAV, COMBO_TERM_SLOW)
+ZMK_COMBO(del,    &kp DEL,        RT1 RT0,        QWERTY NUMNAV, COMBO_TERM_FAST)
+
+ZMK_COMBO(wrdr,   &kp LC(RIGHT),  RM3 RM2,        QWERTY NUMNAV, COMBO_TERM_FAST)
+ZMK_COMBO(wrdl,   &kp LC(LEFT),   RM2 RM1,        QWERTY NUMNAV, COMBO_TERM_FAST)
+ZMK_COMBO(wrdr,   &kp INS,        RM1 RM0,        QWERTY NUMNAV, COMBO_TERM_FAST)
 
 ZMK_COMBO(lbrc,   &kp LBKT,       RB1 RB2,        QWERTY NUMNAV, COMBO_TERM_FAST)
 ZMK_COMBO(rbrc,   &kp RBKT,       RB2 RB3,        QWERTY NUMNAV, COMBO_TERM_FAST)
-ZMK_COMBO(pgup,   &kp PG_UP,      RT1 RT2,        QWERTY NUMNAV, COMBO_TERM_SLOW)
-ZMK_COMBO(pgdn,   &kp PG_DN,      RT2 RT3,        QWERTY NUMNAV, COMBO_TERM_SLOW)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(excl,   &kp EXCL,      LT4 LM4,          QWERTY NUMNAV, COMBO_TERM_SLOW)
