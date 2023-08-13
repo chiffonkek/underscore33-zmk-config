@@ -31,7 +31,7 @@
 
 /* Global settings */
 
-#define &kp keycode) &as LS(keycode) keycode
+// #define AS(keycode) &as LS(keycode) keycode
 #define QUICK_TAP_MS 175
 
 &sk {  // sticky-key config
