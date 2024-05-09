@@ -30,6 +30,7 @@
 #define ___ &trans
 
 /* Global settings */
+// testing line pls delete
 
 // #define AS(keycode) &as LS(keycode) keycode
 #define QUICK_TAP_MS 175
