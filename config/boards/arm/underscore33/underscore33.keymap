@@ -47,6 +47,12 @@ ZMK_BEHAVIOR(swapper2, tri_state,
     ignored-key-positions = <LM0>;
 )
 
+// tap: left-parenthesis | shft + tap: less-than
+ZMK_BEHAVIOR(lpar_lt, mod_morph,
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 / {
 
 behaviors {
