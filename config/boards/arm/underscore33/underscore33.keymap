@@ -22,7 +22,7 @@
 #define STENO 4
 #define MOUSE 5
 
-#include "../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
+#include "../../../zmk-helpers-main/keypos_def/keypos_36keys.h"
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 
