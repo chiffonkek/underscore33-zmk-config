@@ -15,6 +15,17 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "../../zmk-helpers-main/helper.h"
 
+#define QWERTY 0
+#define NUMNAV 1
+#define FN 2
+#define SYS 3
+#define STENO 4
+#define MOUSE 5
+
+#include "../../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
+#include "combos.dtsi"  // requires layer aliases
+#include "mouse.dtsi"
+
 / {
 
 behaviors {
