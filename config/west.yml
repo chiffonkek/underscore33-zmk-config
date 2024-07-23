@@ -5,7 +5,7 @@ manifest:
     - name: urob
       url-base: https://github.com/urob/zmk
     - name: k3d3
-      url-base: https://github.com/k3d3/zmk
+      url-base: https://github.com/k3d3
   projects:
     - name: zmk
       remote: k3d3
