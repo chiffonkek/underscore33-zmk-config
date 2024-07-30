@@ -5,6 +5,13 @@
 #include "../../zmk-helpers/helper.h"
 #include "../../../zmk-helpers/key-labels/36.h"
 
+/* map _33's extra keys */
+#define X_LH  &kp LGUI      // thumb row, left
+#define X_RH  &smart_mouse  // thumb row, right
+
+/* activate bluetooth */
+#define CONFIG_WIRELESS 1
+
 #define DEF 0
 #define NAV 1
 #define FN 2
