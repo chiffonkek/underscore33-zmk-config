@@ -231,12 +231,12 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &trans        &trans &trans &trans &trans           X_MT     &trans &trans &trans &trans &trans        X_RT
+        &trans        &trans &trans &trans &trans           &trans     &trans &trans &trans &trans   
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &trans &trans &trans &trans &trans          X_MM     &trans &trans &trans &trans &trans     X_RM
+        &trans &trans &trans &trans &trans          &trans     &trans &trans &trans &trans   
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &trans &trans &trans &trans &trans          X_MB    &trans &trans &trans &trans &trans         X_RB
+        &trans &trans &trans &trans &trans          &trans    &trans &trans &trans &trans   
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               &trans &trans    X_MH    &trans    &trans                                               X_RH
+                                                  &trans &trans    &trans    &trans    &trans                                               &trans
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
