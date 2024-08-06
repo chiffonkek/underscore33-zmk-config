@@ -11,12 +11,11 @@
 #define CONFIG_WIRELESS 1
 
 #define DEF 0
-#define NAV 1
-#define FN 2
-#define NUM 3
-#define SYS 4
-#define UC 5
-#define MOUSE 6
+#define FN 1
+#define NUM 2
+#define SYS 3
+#define UC 4
+#define MOUSE 5
 
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
@@ -216,10 +215,13 @@ ZMK_MACRO(win_sleep,
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr LCTRL LG(LC(LEFT))   // previous desktop
 #define DSK_NEXT    &hmr LALT LG(LC(RIGHT)) // next     desktop
-#define PIN_WIN     &kp LG(LC(LS(Q)))        // pin window across desktops
-#define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
-#define DSK_MGR     &kp LA(GRAVE)            // desktop manager
+
+
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
+
+#define MEH LC(LS(LALT)) // MEH key (CTRL + SHFT + ALT)
+#define HYPER LC(LS(LA(LGUI))) // HYPER key (CTRL + SHFT + ALT + GUI)
+#define MIN MINUS
 
 /* Keymap */
 
@@ -233,39 +235,27 @@ ZMK_LAYER(BASE,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N         &kp M         &comma_morph  &dot_morph    &qexcl
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                &mo NUM       &lt FN RET    &lt_spc NAV 0   SMART_NUM     &smart_shft   &mo 4
+                                &to 0       &lt 1 RET    &lt_spc 2 0   SMART_NUM     &smart_shft   &mo 3
 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯    
-)
-
-ZMK_LAYER(NAV,
-//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-    ___           ___           &kp LS(TAB)  ___            ___              &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___ 
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___              &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET 
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___              &kp INS       &kp TAB       &kp LT        &kp GT        ___  
-//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                &to 0        ___           ___               ___           ___           CANCEL
-//                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯    
 )
 
 ZMK_LAYER(FN,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-    &kp F12       &kp F7        &kp F8        &kp F9        ___               ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep
+    &kp F12       &kp F7        &kp F8        &kp F9        &sk LCTRL         &sk LGUI   DSK_PREV    &kp C_VOL_DN  &kp C_MUTE &kp C_VOL_UP      
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6 ___               ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___    
+    &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6 &sk LALT          &sk MEH           DSK_PREV      &kp C_PREV  &kp C_PP   &kp C_NEXT DSK_NEXT          
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp F10       &kp F1        &kp F2        &kp F3        ___               PIN_APP       PIN_WIN       DSK_MGR       ___           ___    
+    &kp F10       &kp F1        &kp F2        &kp F3        &sk LSHIFT        &sk HYPER        &kp C_BRI_DN       &win_sleep      &kp C_BRI_UP  
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                 &to 0        ___           ___               &kp C_MUTE    &kp C_PP      ___
+                                 &to 0        ___           ___               &kp C_MUTE     ___     ___
 //                            ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯    
 )
 
 ZMK_LAYER(NUM,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-   &kp N7        &kp N8       &kp N9        &kp N0         &kp LG(LC(LEFT))  ___           ___           &kp UP        ___           ___
+   &kp N7        &kp N8       &kp N9        &kp N0         DSK_PREV          ___           ___           &kp UP        ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-   &hml LGUI N4  &hml LALT N5 &hml LCTRL N6 &hml LSHFT MIN &kp LG(LC(RIGHT)) ___           &hmr RSHFT LEFT &hmr RCTRL DOWN &hmr RALT RIGHT ___
+   &hml LGUI N4  &hml LALT N5 &hml LCTRL N6 &hml LSHFT MIN DSK_NEXT          ___           &hmr RSHFT LEFT &hmr RCTRL DOWN &hmr RALT RIGHT ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
    &kp N1        &kp N2       &kp N3        &kp EQUAL       ___              ___           ___           ___           ___           ___
 //╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
