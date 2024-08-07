@@ -122,7 +122,7 @@ ZMK_TAP_DANCE(num_dance,
 
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+    bindings = <&to 1, &tog MOUSE>, <&none>, <&to 1, &tog MOUSE>;
     ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
     ignored-layers = <MOUSE>;
 )
@@ -249,9 +249,9 @@ ZMK_LAYER(FN,
 
 ZMK_LAYER(NUM,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp N7        &kp N8       &kp N9        &kp N0         &kp LG(LC(LEFT))  ___           ___           &kp UP        ___           ___
+    &kp N7        &kp N8       &kp N9        &kp N0         DSK_PREV          ___           ___           &kp UP        ___           ___
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI N4  &hml LALT N5 &hml LCTRL N6 &hml LSHFT MIN &kp LG(LC(RIGHT)) ___           &hmr RSHFT LEFT &hmr RCTRL DOWN &hmr RALT RIGHT ___
+    &hml LGUI N4  &hml LALT N5 &hml LCTRL N6 &hml LSHFT MIN DSK_NEXT          ___           &hmr RSHFT LEFT &hmr RCTRL DOWN &hmr RALT RIGHT ___
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp N1        &kp N2       &kp N3        &kp EQUAL       ___              ___           ___           ___           ___           ___
 // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
