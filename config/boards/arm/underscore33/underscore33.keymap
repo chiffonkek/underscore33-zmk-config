@@ -122,7 +122,7 @@ ZMK_TAP_DANCE(num_dance,
 
 // smart-mouse, requires PR #1366
 ZMK_TRI_STATE(smart_mouse,
-    bindings = <&to 1, &tog MOUSE>, <&none>, <&to 1, &tog MOUSE>;
+    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
     ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
     ignored-layers = <MOUSE>;
 )
@@ -213,7 +213,7 @@ ZMK_MACRO(win_sleep,
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &kp LG(LC(LEFT))  // previous desktop
+#define DSK_PREV    &kp LG(LC(LEFT))         // previous desktop
 #define DSK_NEXT    &hmr LALT LG(LC(RIGHT))  // next     desktop
 #define MEH LC(LS(LALT))                     // MEH key (CTRL + SHFT + ALT)
 #define HYPER LC(LS(LA(LGUI)))               // HYPER key (CTRL + SHFT + ALT + GUI)
