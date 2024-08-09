@@ -16,8 +16,8 @@
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 // #define HRC_TAB    &hml         LS(LALT) TAB
 // #define HRC_REPEAT &hml_repeat  LS(LCTRL) 0
-// #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
-// #define HRC_RPAR   &hmr_rpar_gt RS(LALT) 0
+#define HRC_WRDL   &hmr_lpar_lt RS(LCTRL) 0
+#define HRC_WRDR   &hmr_rpar_gt RS(LALT) 0
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(tab,   &kp TAB,       LT4 LT3,     DEF    NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -70,9 +70,9 @@ ZMK_COMBO(star,  &kp STAR,      RT2 RM2,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_
 ZMK_COMBO(amps,  &kp AMPS,      RT3 RM3,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(under, &kp UNDER,     RM0 RB0,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(minus, &kp MINUS,     RM1 RB1,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(minus, &lpar_lt,      RM1 RB1,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(fslh,  &kp FSLH,      RM2 RB2,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(pipe,  &rpar_gt,      RM3 RB3,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Horizontal combos - cross hand */
 ZMK_COMBO(caps,  &kp CAPS,      LM1 RM1,     DEF        , COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
