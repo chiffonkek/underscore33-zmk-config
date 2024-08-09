@@ -61,9 +61,9 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-MAKE_HRM(hmr_ret,   &kp, &key_repeat,  KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_wrdl,  &kp, &kp LC(LEFT),  KEYS_L THUMBS)  // "    "   "   "
-MAKE_HRM(hmr_wrdr, &kp, &KP LC(RIGHT), KEYS_L THUMBS)  // "    "   "   "
+MAKE_HRM(hmr_ret,   &kp, RET,  KEYS_R THUMBS)  // used for HRM-combo
+MAKE_HRM(hmr_wrdl,  &kp, WRDL,  KEYS_L THUMBS)  // "    "   "   "
+MAKE_HRM(hmr_wrdr, &kp, WRDR, KEYS_L THUMBS)  // "    "   "   "
 
 // long-tap action on hold, short-tap action on all interrupts
 #define MT_CORE \
@@ -205,6 +205,10 @@ ZMK_MACRO(win_sleep,
 #define MEH LC(LS(LALT))                     // MEH key (CTRL + SHFT + ALT)
 #define HYPER LC(LS(LA(LGUI)))               // HYPER key (CTRL + SHFT + ALT + GUI)
 #define MIN MINUS
+#define RET &kp RET
+#define WRDL &kp LC(LEFT)
+#define WRDR &kp LC(RIGHT)
+
 
 /* Keymap */
 
