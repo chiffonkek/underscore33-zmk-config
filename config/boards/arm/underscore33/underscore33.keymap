@@ -61,13 +61,13 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-#define HRRET &kp RET
-#define HRWRDL &kp LC(LEFT)
-#define HRWRDR &kp LC(RIGHT)
+// #define HRRET &kp RET
+// #define HRWRDL &kp LC(LEFT)
+// #define HRWRDR &kp LC(RIGHT)
 
-MAKE_HRM(hmr_ret,   &kp, HRRET,  KEYS_R THUMBS)  // used for HRM-combo
-MAKE_HRM(hmr_wrdl,  &kp, HRWRDL,  KEYS_L THUMBS)  // "    "   "   "
-MAKE_HRM(hmr_wrdr, &kp, HRWRDR, KEYS_L THUMBS)  // "    "   "   "
+// MAKE_HRM(hmr_ret,   &kp, HRRET,  KEYS_R THUMBS)  // used for HRM-combo
+// MAKE_HRM(hmr_wrdl,  &kp, HRWRDL,  KEYS_L THUMBS)  // "    "   "   "
+// MAKE_HRM(hmr_wrdr, &kp, HRWRDR, KEYS_L THUMBS)  // "    "   "   "
 
 // long-tap action on hold, short-tap action on all interrupts
 #define MT_CORE \
