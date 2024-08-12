@@ -14,9 +14,9 @@
 #define COMBO_IDLE_SLOW 50
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
-#define HRC_RET    &hmr_ret     RA(LGUI)  0
-#define HRC_WRDL   &hmr_wrdl    RS(LCTRL) 0
-#define HRC_WRDR   &hmr_wrdr    RC(LALT)  0
+// #define HRC_RET    &hmr_ret     RA(LGUI)  0
+// #define HRC_WRDL   &hmr_wrdl    RS(LCTRL) 0
+// #define HRC_WRDR   &hmr_wrdr    RC(LALT)  0
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(tab,   &kp TAB,       LT4 LT3,     DEF    NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -34,9 +34,9 @@ ZMK_COMBO(pgdn,  &kp PG_DN,     RT2 RT3,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_
 ZMK_COMBO(pgup,  &kp PG_UP,     RT1 RT2,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(del,   &kp DEL,       RT0 RT1,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(ret,   HRC_RET,   RM3 RM4,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(wrdl,  HRC_WRDL,  RM1 RM2,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(wrdr,  HRC_WRDR,  RM2 RM3,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// ZMK_COMBO(ret,   HRC_RET,   RM3 RM4,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// ZMK_COMBO(wrdl,  HRC_WRDL,  RM1 RM2,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// ZMK_COMBO(wrdr,  HRC_WRDR,  RM2 RM3,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(ins,   &kp INS,   RM0 RM1,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     DEF     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
