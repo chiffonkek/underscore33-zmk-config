@@ -14,7 +14,7 @@
 #define COMBO_IDLE_SLOW 50
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
-// #define HRC_RET    &hmr_ret     RA(LGUI)  0
+#define HRC_RET    &hmr_ret     RA(LGUI)  0
 // #define HRC_WRDL   &hmr_wrdl    RS(LCTRL) 0
 // #define HRC_WRDR   &hmr_wrdr    RC(LALT)  0
 
