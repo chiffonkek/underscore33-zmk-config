@@ -66,7 +66,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 // #define HRWRDR &kp LC(RIGHT)
 
 MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)
-// MAKE_HRM(hmr_ret,   &kp, HRRET,  KEYS_R THUMBS)  // used for HRM-combo
+// MAKE_HRM(hmr_ret,   &kp, &kp,  KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hmr_wrdl,  &kp, HRWRDL,  KEYS_L THUMBS)  // "    "   "   "
 // MAKE_HRM(hmr_wrdr, &kp, HRWRDR, KEYS_L THUMBS)  // "    "   "   "
 
