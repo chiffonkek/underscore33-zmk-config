@@ -13,14 +13,17 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-// make homerow combos tap-only (so HRMs can be chorded instantaneously)
+// Make homerow combos tap-only (so HRMs can be chorded instantaneously) (usage instructions as below)
 // if combo invokes behavior that is not just a keypress, must create a custom behavior in keymap file under [MAKE_HRM] section then write [tap] result as 0 (dummy target)
 // if combo is just a regular keypress, then just refer the side that the combo takes place on [&hml or &hmr] then write the tap result as the intended keypress
-// structure is as follows:
+// structure and example is as follows:
 // #define [label] [invoked behavior] [hold result] [tap result]
-#define HRC_RET    &hmr     RA(LGUI)  RET
-// #define HRC_WRDL   &hmr_wrdl    RS(LCTRL) 0
-// #define HRC_WRDR   &hmr_wrdr    RC(LALT)  0
+// #define HRC_TAB    &hml         LS(LALT) TAB
+// #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
+
+#define HRC_RET    &hmr    RA(LGUI)  RET
+#define HRC_WRDL   &hmr    RS(LCTRL) LC(LEFT)
+#define HRC_WRDR   &hmr    RC(LALT)  LC(RIGHT)
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(tab,   &kp TAB,       LT4 LT3,     DEF    NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
@@ -39,8 +42,8 @@ ZMK_COMBO(pgup,  &kp PG_UP,     RT1 RT2,     DEF FN NUM, COMBO_TERM_SLOW, COMBO_
 ZMK_COMBO(del,   &kp DEL,       RT0 RT1,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(ret,   HRC_RET,   RM3 RM4,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-// ZMK_COMBO(wrdl,  HRC_WRDL,  RM1 RM2,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-// ZMK_COMBO(wrdr,  HRC_WRDR,  RM2 RM3,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(wrdl,  HRC_WRDL,  RM1 RM2,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(wrdr,  HRC_WRDR,  RM2 RM3,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(ins,   &kp INS,   RM0 RM1,     DEF FN NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lbkt,  &kp LBKT,      RB1 RB2,     DEF     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
